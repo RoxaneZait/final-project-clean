@@ -1,0 +1,12 @@
+.comments {
+  display: flex;
+  .rounded-circle {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+  }
+  .commentInfo {
+    display: flex;
+    flex-direction: column;
+  }
+}

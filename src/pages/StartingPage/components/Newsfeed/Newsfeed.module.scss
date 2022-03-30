@@ -1,0 +1,112 @@
+.newsFeed {
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(245, 239, 239);
+}
+
+#profilepic {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.round-icons {
+  background-color: rgb(94, 94, 94);
+}
+
+.small-item {
+  font-size: 20px;
+}
+
+.main-div {
+  padding: 25px 5px 0 5px;
+  background-color: white;
+  border: 2px solid gray;
+  margin: 10px;
+}
+
+.post-image {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 15px 0 10px 0;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info a {
+  text-decoration: none;
+  color: #302b28;
+}
+
+.user-info .context-menu {
+  position: relative;
+}
+
+.user-info .context-menu .context-menu-dropdown {
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  background-color: grey;
+  right: 30px;
+}
+
+.fa-ellipsis-h {
+  margin-right: 10px;
+}
+
+.likes-shares {
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes-shares a {
+  text-decoration: none;
+  font-size: small;
+  color: #302b28;
+}
+
+.post-reaction {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(207, 206, 206);
+}
+
+.post-reaction a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #302b28;
+}
+
+.post-reaction a.blue {
+  color: blue;
+}
+
+.commentContent {
+  width: 100%;
+  input {
+    border: unset;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+.comment-box-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}

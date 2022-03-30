@@ -1,0 +1,14 @@
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  .newsfeed {
+    width: 600px;
+    border: 1px solid black;
+    height: 1000px;
+  }
+  aside {
+    width: 300px;
+    border: 1px solid black;
+  }
+}
