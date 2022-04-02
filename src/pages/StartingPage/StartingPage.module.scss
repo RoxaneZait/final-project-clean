@@ -1,14 +1,9 @@
 .mainContainer {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   .newsfeed {
     width: 600px;
-    border: 1px solid black;
+    border: 1px solid rgb(174, 171, 171);
     height: 1000px;
-  }
-  aside {
-    width: 300px;
-    border: 1px solid black;
   }
 }

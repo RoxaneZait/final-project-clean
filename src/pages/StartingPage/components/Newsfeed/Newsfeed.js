@@ -1,5 +1,5 @@
 import classes from "./Newsfeed.module.scss";
-import newPicture from "../../../../assets/firephoto.jpeg";
+import profilePicture from "../../../../assets/firephoto.jpeg";
 import { FaEllipsisH, FaThumbsUp, FaComment, FaShare } from "react-icons/fa";
 import CommentsSection from "./Comments/CommentsSection";
 import { useState } from "react";
@@ -11,6 +11,8 @@ const Newsfeed = (props) => {
     likesNumber: props.postData.numberOfLikes,
     sharesNumber: props.postData.numberOfShares,
   });
+
+  const [profileOptionsVisible, setProfileOptionsVisible] = useState(false);
 
   const toggleReactions = (reactionType) => {
     if (reactionType === "likes") {
@@ -30,47 +32,59 @@ const Newsfeed = (props) => {
     }
   };
 
+  const deleteThisPost = () => {
+    props.removePost(props.postData.id);
+  };
+
+  const toggleProfileState = () => {
+    setProfileOptionsVisible((prevState) => {
+      return !prevState;
+    });
+  };
+
   return (
     <div className={classes.newsFeed}>
       <div className={classes["main-div"]}>
         <div className={classes["user-info"]}>
-          <a href="#">
+          <div className={classes.postAuthor}>
             <img
               className={classes["rounded-circle"]}
               id={classes.profilepic}
-              src={newPicture}
-              alt="Profile picture"
+              src={profilePicture}
+              alt="Profile"
             />
             <span id={classes["username"]}>{props.postData.username}</span>
-          </a>
-          <div className={classes["context-menu"]}>
+          </div>
+          <div
+            className={classes["context-menu"]}
+            onClick={toggleProfileState}
+            tabIndex="1"
+          >
+            {/* <div className={classes["context-menu"]} onClick={toggleProfileState} onBlur={toggleProfileState} tabIndex="1"> */}
             <a href="#" id="context-menu-button">
               <FaEllipsisH />
             </a>
-            <div
-              className={classes["context-menu-dropdown"]}
-              style={{ display: "none" }}
-            ></div>
+            {profileOptionsVisible && (
+              <div className={classes["context-menu-dropdown"]}>
+                <button onClick={deleteThisPost}>Delete this post</button>
+              </div>
+            )}
           </div>
         </div>
 
         <div>
-          <img
-            className={classes["post-image"]}
-            src={newPicture}
-            alt="New picture"
-          />
+          <img className={classes["post-image"]} src={profilePicture} alt="New" />
           <p id={classes["postTitle"]}>{props.postData.text}</p>
         </div>
         <div className={classes["likes-shares"]}>
-          <a href="#">
+          <div className={classes.likes}>
             <FaThumbsUp />
             <span>{reactions.likesNumber} likes</span>
-          </a>
-          <a href="#">
+          </div>
+          <div className={classes.shares}>
             <FaShare />
             <span>{reactions.sharesNumber} shares</span>
-          </a>
+          </div>
         </div>
         <div className={classes["post-reaction"]}>
           <div
@@ -95,12 +109,17 @@ const Newsfeed = (props) => {
           </div>
         </div>
         <div className={classes["comment-box-container"]}>
+          {props.postData.comments.map((comment) => {
+            return (
+              <CommentsSection
+                key={comment.id}
+                commentData={comment}
+              ></CommentsSection>
+            );
+          })}
           <div className={classes.commentContent}>
             <input type="text" placeholder="Introduceti comentariul aici..." />
           </div>
-          {props.postData.comments.map((comment) => {
-            return <CommentsSection commentData={comment}></CommentsSection>;
-          })}
         </div>
       </div>
     </div>

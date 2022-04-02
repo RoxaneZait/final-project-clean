@@ -1,12 +1,26 @@
 .comments {
   display: flex;
+  margin-bottom: 5px;
+  padding: 5px;
+  // border: 1px solid rgb(206, 196, 196);
   .rounded-circle {
     height: 50px;
-    width: auto;
+    width: 50px;
     border-radius: 50%;
   }
   .commentInfo {
     display: flex;
     flex-direction: column;
+    padding: 13px;
+    margin-left: 5px;
+    background-color: rgb(245, 240, 240);
+    border-radius: 18px;
+    font-size: medium;
+    .userInfo {
+      font-weight: bold;
+    }
+    .dateInfo {
+      font-size: small;
+    }
   }
 }
