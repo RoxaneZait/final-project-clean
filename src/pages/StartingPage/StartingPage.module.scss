@@ -1,9 +1,11 @@
 .mainContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: #e4e6eb;
+
   .newsfeed {
-    width: 600px;
-    border: 1px solid rgb(174, 171, 171);
-    height: 1000px;
+    width: calc(40vw - 15px);
+    position: relative;
+    top: 3.5rem;
   }
 }

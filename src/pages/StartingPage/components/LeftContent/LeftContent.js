@@ -1,6 +1,6 @@
-// import classes from './LeftContent.module.scss'
-import  MenuItem  from './MenuItem';
-import SideMenu from './SideMenu';
+import classes from './LeftContent.module.scss'
+import  MenuItem  from '../../../../components/MenuItem';
+import SideMenu from '../../../../components/SideMenu';
 import peopleIcon from "../../../../assets/people-icon.png"
 import groupIcon from "../../../../assets/people-group-icon.png"
 import shopIcon from "../../../../assets/shop-icon.png";
@@ -11,6 +11,7 @@ import dashboardIcon from "../../../../assets/dashboard-icon.png"
 
 const LeftContent = () => {
     return (
+      <div className={classes.leftContent}>
       <SideMenu>
         <MenuItem>
           <img src={peopleIcon} alt="Friends" />
@@ -41,6 +42,7 @@ const LeftContent = () => {
           Professional Dashboard
         </MenuItem>
       </SideMenu>
+      </div>
     );
 }
 

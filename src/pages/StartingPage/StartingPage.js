@@ -2,8 +2,7 @@ import classes from "./StartingPage.module.scss";
 import LeftContent from "./components/LeftContent/LeftContent"; // ./ in acelasi folder
 import RightContent from "./components/RightContent/RightContent";
 // import userIcon from "../../assets/user.png"; // ../ un folder superior
-import Newsfeed from "./components/Newsfeed/Newsfeed";
-// import { useState } from "react";
+import NewsfeedItem from "./components/Newsfeed/NewsfeedItem";
 import usePost from "../../hooks/use-post";
 
 
@@ -62,8 +61,9 @@ const [postData, setDeletePost] = usePost(10000);
       <div className={classes.newsfeed}>
         {postData.map((post) => {
             return (
-              <Newsfeed postData={post} removePost={deletePost} key={post.id} />
-            );        })}
+              <NewsfeedItem postData={post} removePost={deletePost} key={post.id} />
+            );       
+        })}
       </div>
       <RightContent></RightContent>
     </div>

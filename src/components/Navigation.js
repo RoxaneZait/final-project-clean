@@ -68,7 +68,6 @@ const Navigation = () => {
         </nav>
       </header>
 
-      <div>
         <Dialog
           open={open}
           onClose={handleClose}
@@ -91,7 +90,6 @@ const Navigation = () => {
             </Button>
           </DialogActions>
         </Dialog>
-      </div>
       </div>
     );
 }

@@ -1,10 +1,10 @@
-import classes from "./Newsfeed.module.scss";
+import classes from "./NewsfeedItem.module.scss";
 import profilePicture from "../../../../assets/firephoto.jpeg";
 import { FaEllipsisH, FaThumbsUp, FaComment, FaShare } from "react-icons/fa";
 import CommentsSection from "./Comments/CommentsSection";
 import { useState } from "react";
 
-const Newsfeed = (props) => {
+const NewsfeedItem = (props) => {
   // const todaysDate = new Date('29.03.2021'); // to be used with input field to generate new comment
 
   const [reactions, setReactions] = useState({
@@ -43,7 +43,7 @@ const Newsfeed = (props) => {
   };
 
   return (
-    <div className={classes.newsFeed}>
+    <div className={classes.newsFeedItem}>
       <div className={classes["main-div"]}>
         <div className={classes["user-info"]}>
           <div className={classes.postAuthor}>
@@ -73,8 +73,12 @@ const Newsfeed = (props) => {
         </div>
 
         <div>
-          <img className={classes["post-image"]} src={profilePicture} alt="New" />
-          <p id={classes["postTitle"]}>{props.postData.text}</p>
+          <img
+            className={classes["post-image"]}
+            src={profilePicture}
+            alt="New"
+          />
+          <p className={classes.postTitle}>{props.postData.text}</p>
         </div>
         <div className={classes["likes-shares"]}>
           <div className={classes.likes}>
@@ -126,4 +130,4 @@ const Newsfeed = (props) => {
   );
 };
 
-export default Newsfeed;
+export default NewsfeedItem;
