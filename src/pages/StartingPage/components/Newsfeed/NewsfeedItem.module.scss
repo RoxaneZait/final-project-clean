@@ -45,12 +45,17 @@
   position: relative;
 }
 
-.user-info .context-menu .context-menu-dropdown {
+.context-menu-dropdown {
   width: 150px;
-  height: 300px;
+  height: auto;
   position: absolute;
-  background-color: grey;
+  background-color: #e4e6eb;
   right: 30px;
+  button {
+    width: 150px;
+    border: none;
+    padding: 5px;
+  }
 }
 
 .fa-ellipsis-h {

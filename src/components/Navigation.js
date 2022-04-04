@@ -11,64 +11,70 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
 const Navigation = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const navigate = useNavigate();
-    const [open, setOpen] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const navigate = useNavigate();
+    // const [open, setOpen] = useState(false);
 
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
+    // const handleClickOpen = () => {
+    //   setOpen(true);
+    // };
 
-    const handleClose = (state) => {
-      if (state === "agree") {
-        setOpen(false);
-        navigate("/auth");
-        setIsLoggedIn(!isLoggedIn);
-      } else {
-        setOpen(false);
-      }
-    };
+    // const handleClose = (state) => {
+    //   if (state === "agree") {
+    //     setOpen(false);
+    //     navigate("/auth");
+    //     setIsLoggedIn(!isLoggedIn);
+    //   } else {
+    //     setOpen(false);
+    //   }
+    // };
 
-    const login = () => {
-      navigate("/");
-      setIsLoggedIn(!isLoggedIn);
-    };
+    // const login = () => {
+    //   navigate("/");
+    //   setIsLoggedIn(!isLoggedIn);
+    // };
 
-    const toggleAuth = () => {
-      isLoggedIn ? login() : handleClickOpen();
-    }
+    // const toggleAuth = () => {
+    //   isLoggedIn ? login() : handleClickOpen();
+    // }
 
     return (
       <div>
-      <header className={classes.header}>
-        <Link to="/">
-          <div className={classes.logo}>
-            {/* <a href="#"></a> */}
-            <FaFacebook />
-            <span> facebook</span>
-          </div>
-        </Link>
-        <nav>
-          <ul className={classes.menu}>
-            <li className={classes.menuItem}>
-              <Link to="/">Profile</Link>
-            </li>
-            <li className={classes.menuItem}>
-              <Link to="/friends">Friends</Link>
-            </li>
-            <li className={classes.menuItem}>
-              <Link to="/chat">Chat</Link>
-            </li>
-            <li className={classes.menuItem}>
-              <button onClick={toggleAuth}>
-                {isLoggedIn ? "Login" : "Logout"}
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        <header className={classes.header}>
+          <Link to="/">
+            <div className={classes.logo}>
+              <FaFacebook />
+              <span> facebook</span>
+              <div className={classes.search}>
+              <input
+                className={classes.searchBar}
+                type="text"
+                placeholder="Search Facebook..."
+              />
+              </div>
+            </div>
+          </Link>
+          <nav>
+            <ul className={classes.menu}>
+              <li className={classes.menuItem}>
+                <Link to="/">Profile</Link>
+              </li>
+              <li className={classes.menuItem}>
+                <Link to="/friends">Friends</Link>
+              </li>
+              <li className={classes.menuItem}>
+                <Link to="/chat">Chat</Link>
+              </li>
+              <li className={classes.menuItem}>
+                {/* <button onClick={toggleAuth}>
+                  {isLoggedIn ? "Login" : "Logout"}
+                </button> */}
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-        <Dialog
+        {/* <Dialog
           open={open}
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
@@ -84,12 +90,16 @@ const Navigation = () => {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={() => handleClose('disagree')}>Disagree</Button>
-            <Button variant="outlined" onClick={() => handleClose('agree')} autoFocus>
+            <Button onClick={() => handleClose("disagree")}>Disagree</Button>
+            <Button
+              variant="outlined"
+              onClick={() => handleClose("agree")}
+              autoFocus
+            >
               Agree
             </Button>
           </DialogActions>
-        </Dialog>
+        </Dialog> */}
       </div>
     );
 }

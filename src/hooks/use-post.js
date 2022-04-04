@@ -3,22 +3,22 @@ import { useEffect, useState } from "react";
 const POST_DATA = [
   {
     id: 0,
-    username: "Roxane 1",
-    postDate: "20/07/2022",
+    username: "Roxane Zait",
+    postDate: "20/01/2022",
     numberOfLikes: 45,
     numberOfShares: 12,
-    profileImg: "../assests/firephoto.jpeg",
-    text: "This is my new dynamic post",
+    // profileImg: "../assests/firephoto.jpeg",
+    text: "This is my new profile picture",
     comments: [
       {
         id: "1",
-        username: "Rox",
-        date: "21/01/2021",
+        username: "Mister Garfield",
+        date: "21/02/2021",
         comment: "This is my first dynamic content",
       },
       {
         id:"2",
-        username: "Roxy",
+        username: "Mister Garfield",
         date: "22/01/2021",
         comment: "This is my second dynamic content",
       },
@@ -27,11 +27,11 @@ const POST_DATA = [
   {
     id: 1,
     username: "Roxane 2",
-    postDate: "14/01/1922",
+    postDate: "14/01/2010",
     numberOfLikes: 78,
     numberOfShares: 4,
-    profileImg: "../assests/firephoto.jpeg",
-    text: "This is my second dynamic post",
+    // profileImg: "../assests/firephoto.jpeg",
+    text: "Felt cute, might delete later.",
     comments: [
       {
         id:"1",

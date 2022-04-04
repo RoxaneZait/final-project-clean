@@ -1,5 +1,5 @@
 import classes from "./NewsfeedItem.module.scss";
-import profilePicture from "../../../../assets/firephoto.jpeg";
+import profilePicture from "../../../../assets/catprofile.jpg";
 import { FaEllipsisH, FaThumbsUp, FaComment, FaShare } from "react-icons/fa";
 import CommentsSection from "./Comments/CommentsSection";
 import { useState } from "react";
@@ -67,18 +67,22 @@ const NewsfeedItem = (props) => {
             {profileOptionsVisible && (
               <div className={classes["context-menu-dropdown"]}>
                 <button onClick={deleteThisPost}>Delete this post</button>
+                <button>Save this post</button>
+                <button>Hide this post</button>
+                <button>Unfollow this person</button>
+                <button>Snooze for 30 days</button>
               </div>
             )}
           </div>
         </div>
 
         <div>
+          <p className={classes.postTitle}>{props.postData.text}</p>
           <img
             className={classes["post-image"]}
             src={profilePicture}
             alt="New"
           />
-          <p className={classes.postTitle}>{props.postData.text}</p>
         </div>
         <div className={classes["likes-shares"]}>
           <div className={classes.likes}>
@@ -122,7 +126,7 @@ const NewsfeedItem = (props) => {
             );
           })}
           <div className={classes.commentContent}>
-            <input type="text" placeholder="Introduceti comentariul aici..." />
+            <input type="text" placeholder="Write a comment..." />
           </div>
         </div>
       </div>
