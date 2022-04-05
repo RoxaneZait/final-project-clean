@@ -47,12 +47,11 @@ const NewsfeedItem = (props) => {
       <div className={classes["main-div"]}>
         <div className={classes["user-info"]}>
           <div className={classes.postAuthor}>
-            <img
+            <div
+              style={{ backgroundImage: `url(${profilePicture})` }}
               className={classes["rounded-circle"]}
               id={classes.profilepic}
-              src={profilePicture}
-              alt="Profile"
-            />
+            ></div>
             <span id={classes["username"]}>{props.postData.username}</span>
           </div>
           <div

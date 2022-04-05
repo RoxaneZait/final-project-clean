@@ -8,16 +8,21 @@ import { useState } from 'react';
 
 
 function App() {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="App">
-      <div>AM I LOGGED IN? {isLoggedIn ? "TRUE" : "FALSE"}</div>
-      <button onClick={() => setLoggedIn(!isLoggedIn)}>LOGIN</button>
-      <Layout>
+
+
+
+      {/* <button onClick={() => setLoggedIn(!isLoggedIn)}>{isLoggedIn ? "Log out" : "Log in"}</button> */}
+
+
+
+      <Layout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}>
         <Routes>
-          <Route path="/" element={<HomePage></HomePage>}></Route>
-          <Route path="/auth" element={<AuthPage></AuthPage>}></Route>
+          <Route path="/" element={<AuthPage/>}></Route>
+          <Route path="/feed" element={<HomePage/>}></Route>
         </Routes>
       </Layout>
     </div>

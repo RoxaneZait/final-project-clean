@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 const Layout = (props) => {
     return (
         <div>
-            <Navigation></Navigation>
+            <Navigation isLoggedIn={props.isLoggedIn} setIsLoggedIn={props.setIsLoggedIn}/>
             <main>{props.children}</main>
         </div>
     );
