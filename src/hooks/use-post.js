@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const POST_DATA = [
   {
     id: 0,
-    username: "Roxane Zait",
+    username: "Miss Kitty",
     postDate: "20/01/2022",
     numberOfLikes: 45,
     numberOfShares: 12,
@@ -14,19 +14,19 @@ const POST_DATA = [
         id: "1",
         username: "Mister Garfield",
         date: "21/02/2021",
-        comment: "This is my first dynamic content",
+        comment: "Hello Miss Kitty!",
       },
       {
-        id:"2",
+        id: "2",
         username: "Mister Garfield",
-        date: "22/01/2021",
-        comment: "This is my second dynamic content",
+        date: "28/01/2021",
+        comment: "I have sent you a Friend Request, could you please accept?",
       },
     ],
   },
   {
     id: 1,
-    username: "Roxane 2",
+    username: "Miss Pixie",
     postDate: "14/01/2010",
     numberOfLikes: 78,
     numberOfShares: 4,
@@ -34,10 +34,10 @@ const POST_DATA = [
     text: "Felt cute, might delete later.",
     comments: [
       {
-        id:"1",
+        id: "1",
         username: "Roxane",
-        date: "11/06/2027",
-        comment: "This is my second dynamic content",
+        date: "11/03/2022",
+        comment: "I have sent you a Friend Request, could you please accept?",
       },
     ],
   },

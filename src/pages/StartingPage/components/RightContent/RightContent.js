@@ -30,12 +30,12 @@ const RightContent = () => {
             <div>
               <img
                 className={`${classes.roundedCircle} ${classes.small} ${classes.first}`}
-                src={catPicture}
+                src={misterWhiskers}
                 alt="Profile"
               />
               <img
                 className={`${classes.roundedCircle} ${classes.small} ${classes.last}`}
-                src={catPicture}
+                src={roberTheMilkman}
                 alt="Profile"
               />
               <p>10 mutual Friends</p>

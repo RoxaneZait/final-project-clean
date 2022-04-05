@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import classes from './CommentsSection.module.scss'
-import newPicture from "../../../../../assets/firephoto.jpeg";
 import catPicture from "../../../../../assets/cat.jpeg";
 
 
